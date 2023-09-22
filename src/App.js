@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Hero from "./component/Hero";
+import Nav from "./component/Nav";
+import Banner from "./component/Banner";
+import Bestoffer from "./component/Bestoffer";
+import Gallery from "./component/Gallery";
+import NewTrends from "./component/NewTrends";
+import Footer from "./component/Footer";
+import Product from "./component/product/Product";
+import { useState } from "react";
+
 
 function App() {
+  const [itemCount,setItemCount] = useState(0)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Nav />
+        <Hero />
+        <Banner />
+        <Product/>
+        <Bestoffer />
+        <Gallery />
+        <NewTrends />
+        <Footer />
     </div>
   );
 }

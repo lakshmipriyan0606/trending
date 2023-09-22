@@ -4,11 +4,9 @@ import { FaXmark } from "react-icons/fa6";
 const CartItem = ({ product }) => {
   const [count, setCount] = useState(0);
   const [deleteItem,setDeleteItem] = useState(false)
-  const [itemCount, setItemCount] = useState(0);
 
   function countValue(e) {
     setCount(e.target.value);
-    setItemCount(itemCount + 1);
   }
 
 
@@ -17,9 +15,7 @@ const CartItem = ({ product }) => {
   }
 
 
-  // function handleRemove(e) {
-   
-  // }
+
 
   const { price, title, img } = product;
   return (

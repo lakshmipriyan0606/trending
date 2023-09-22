@@ -6,7 +6,7 @@ import Gallery from "./component/Gallery";
 import NewTrends from "./component/NewTrends";
 import Footer from "./component/Footer";
 import Product from "./component/product/Product";
-import { useState } from "react";
+
 
 
 function App() {

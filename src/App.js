@@ -10,7 +10,7 @@ import { useState } from "react";
 
 
 function App() {
-  const [itemCount,setItemCount] = useState(0)
+
   return (
     <div className="App">
         <Nav />

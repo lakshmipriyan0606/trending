@@ -40,13 +40,13 @@
         desc : "Wedding Rings A Gift For A Lifetime"
     },
     {
-        id:5,
+        id:6,
         img: blog6,
         date: "21 February 2020",
         desc : "Wedding Rings A Gift For A Lifetime"
     },
     {
-        id:6,
+        id:7,
         img: blog7,
         date: "09 March 2022",
         desc : "Wedding Rings A Gift For A Lifetime"

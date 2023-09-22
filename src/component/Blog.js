@@ -18,7 +18,7 @@ const Blog = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {
             blogDetail.map(blog=>{
-                return <div >
+                return <div key={blog.id} >
                    <div className="p-4 flex flex-col">
                 <img src={blog.img} alt="blog-img" />
                 <div className="bg-white text-black relative bottom-8 w-[200px] p-2  mx-auto  ">

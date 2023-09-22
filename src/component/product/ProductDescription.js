@@ -17,6 +17,7 @@ const ProductDescription = () => {
               type="button"
               className=" text-2xl font-bold cursor-pointer transition-colors duration-500  "
               value={desc}
+              key={desc[0]}
               onClick={handleShow}
             />
           );

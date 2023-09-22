@@ -13,9 +13,26 @@ const ProductDetail = () => {
   const { id } = useParams();
   const product = data.find((item) => item.id === parseInt(id));
 
- const  sizeList = ["S","L","M","XXL","XL"]
+ const  sizeList = [
+    {
+    id : 1,
+    size : "S"
+    },
+    {
+    id : 2,
+    size : "L"
+    },
+    {
+    id : 3,
+    size : "M"
+    },
+    {
+    id : 4,
+    size : "XL"
+    },
+]
 
-   const  [size,setSize] = useState("")
+   const  [sizes,setSize] = useState("")
 
    
    function handleSize(e) {
@@ -33,14 +50,6 @@ const ProductDetail = () => {
   return (
     <div>
       <Nav />
-      <Link
-        to="/"
-        className="flex justify-start pl-5 items-center gap-1 underline text-xl cursor-pointer mt-6 "
-      >
-        
-        <FaArrowLeft className="text-base" />
-        Home
-      </Link>
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center  shadow-xl m-6  rounded-lg md:shadow-none">
         <div>
           <img src={img} alt="product-img" className="rounded-xl w-full md:h-[450px] object-fill p-8" />
@@ -54,15 +63,15 @@ const ProductDetail = () => {
               $69.65
             </span>
           </h3>
-          <h4 className="flex justify-center items-center gap-2">
-            <Rating rating={rating} /> <h4>{review} (review)</h4>
-          </h4>
+          <h1 className="flex justify-center items-center gap-2">
+            <Rating rating={rating} /> <span>{review} (review)</span>
+          </h1>
           <div>
              <h1 className="text-center text-2xl">Size</h1>
             <div className="flex gap-3">
             {
             sizeList.map(function(sizeitem){
-              return <input className= {size === sizeitem ?  " bg-black text-white border text-lg  mt-4 border-black rounded-full w-10 h-10 flex items-center justify-center  " : "rounded-full w-10 h-10 flex items-center justify-center border text-lg mt-4 border-black"} type="button" value={sizeitem} onClick={handleSize}/>
+              return <input key={sizeitem.id} className= {sizes === sizeitem.size ?  " bg-black text-white border text-lg  mt-4 border-black rounded-full w-10 h-10 flex items-center justify-center  " : "rounded-full w-10 h-10 flex items-center justify-center border text-lg mt-4 border-black"} type="button" value={sizeitem.size} onClick={handleSize}/>
             })
           }
             </div>

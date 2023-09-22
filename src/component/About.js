@@ -97,7 +97,7 @@ const About = () => {
          <div className="grid grid-cols-2 md:grid-cols-4 place-items-center gap-4 ">
             {
                 clientImg.map(client=>{
-                    return <img src={client.img} alt="client-img"/>
+                    return <img key={client.id} src={client.img} alt="client-img"/>
                 })
             }
          </div>

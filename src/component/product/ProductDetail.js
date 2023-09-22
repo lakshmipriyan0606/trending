@@ -5,7 +5,6 @@ import Rating from "./Rating";
 import Footer from "../Footer";
 import Nav from "../Nav";
 import SimilarProduct from "./SimilarProduct";
-import { FaArrowLeft} from "react-icons/fa";
 import { useState } from "react";
 import ProductDescription from "./ProductDescription";
 

@@ -15,11 +15,11 @@ const About = () => {
   return (
     <div>
       <Nav />
-      <div className="">
+      <div className="mt-16">
       <div>
         <img src={img1} alt="about-img" className="p-3 w-full object-fill" />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 p-3 gap-5 mb-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 p-3 gap-5 mb-5 ">
         <div>
           <h1 className="p-3 text-2xl font-semibold">Who We Are ?</h1>
           <p className="p-2 text-gray-700">

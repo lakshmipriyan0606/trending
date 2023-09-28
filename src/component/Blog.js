@@ -11,7 +11,7 @@ const Blog = () => {
         <Nav/>
       <div
         style={{ backgroundImage: `url(${blog4})` }}
-        className="w-full h-[300px]  md:h-[450px]  bg-cover bg-center"
+        className="w-full h-[300px]  md:h-[450px]  bg-cover bg-center mt-20"
       >
         <h1 className="flex justify-center  text-3xl text-white font-semibold items-center h-[250px]"> OUR BLOG</h1>
       </div>

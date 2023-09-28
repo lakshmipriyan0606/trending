@@ -5,10 +5,15 @@ import Rating from "./Rating";
 import Footer from "../Footer";
 import Nav from "../Nav";
 import SimilarProduct from "./SimilarProduct";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProductDescription from "./ProductDescription";
 
 const ProductDetail = () => {
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
+
   const { id } = useParams();
   const product = data.find((item) => item.id === parseInt(id));
 
@@ -49,7 +54,7 @@ const ProductDetail = () => {
   return (
     <div>
       <Nav />
-      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center  shadow-xl m-6  rounded-lg md:shadow-none">
+      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center  shadow-xl m-6  mt-24 rounded-lg md:shadow-none">
         <div>
           <img src={img} alt="product-img" className="rounded-xl w-full md:h-[450px] object-fill p-8" />
         </div>

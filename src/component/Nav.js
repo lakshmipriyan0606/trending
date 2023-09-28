@@ -12,7 +12,7 @@ const Nav = () => {
 
   return (
     <div>
-      <div className="flex justify-between  items-center p-4 md:hidden">
+      <div className="flex justify-between  items-center p-4 md:hidden fixed top-0 left-0 w-full bg-[#F3F2EE]">
         <h1 className="text-3xl font-bold md:pt-2">
           Trend<span className=" text-[#E53637] ">ing</span>
         </h1>
@@ -25,7 +25,7 @@ const Nav = () => {
       <h1 className="text-3xl font-bold md:pt-2">
           Trend<span className=" text-[#E53637] ">ing</span>
         </h1>
-        <ul className="mt-3 md:gap-10  lg:gap-20  text-xl hidden md:flex ">
+        <ul className="mt-3 md:gap-9 md:mr-10 lg:gap-20  text-xl hidden md:flex ">
               <Link to={`/`} className=" text-center hover:text-[#E53637] duration-500 transition-colors">
                 <li>Home</li>
               </Link  >

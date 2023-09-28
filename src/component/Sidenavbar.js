@@ -12,7 +12,7 @@ const Sidenavbar = ({ sideNavbar, setSideNavbar }) => {
       <div
         className={
           sideNavbar
-            ? "absolute top-0  shadow-2xl bg-[#FFFFFF] w-[80%] z-50 h-screen text-black transition-all duration-700 left-0"
+            ? "fixed top-0  shadow-2xl bg-[#FFFFFF] w-[80%] z-50 h-screen text-black transition-all duration-700 left-0"
             : "  transition-all duration-700 -left-3/4 "
         }
       >

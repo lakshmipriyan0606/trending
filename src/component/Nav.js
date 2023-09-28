@@ -12,17 +12,17 @@ const Nav = () => {
 
   return (
     <div>
-      <div className="fixed top-0 left-0 w-full bg-[#F3F2EE] z-50">
-        <div className="flex justify-between items-center p-4 md:hidden">
+      <div className=" bg-[#F3F2EE] fixed top-0 z-50  w-full ">
+        <div className="flex  justify-between items-center p-4 md:hidden">
           <h1 className="text-3xl font-bold md:pt-2">
             Trend<span className="text-[#E53637]">ing</span>
           </h1>
           <FaBarsStaggered
-            className="text-2xl cursor-pointer md:hidden"
+            className="text-2xl cursor-pointer md:hidden mr-7"
             onClick={toggleSidenav}
           />
         </div>
-        <div className="hidden md:flex md:justify-between p-3">
+        <div className="hidden md:flex md:justify-between  p-3">
           <h1 className="text-3xl font-bold md:pt-2">
             Trend<span className="text-[#E53637]">ing</span>
           </h1>

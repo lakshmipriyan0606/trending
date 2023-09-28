@@ -14,7 +14,7 @@ const NewTrends = () => {
 
 
   return (
-    <div data-aos="zoom-out-up">
+    <div >
       <div className="flex flex-col gap-2 justify-center items-center">
         <h1 className="text-[#E53637] mt-6 text-xl  text-center mb-5">
           LATEST NEWS
@@ -23,7 +23,7 @@ const NewTrends = () => {
           Fashion New Trends
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:p-4"  >
-        <div className="p-4 flex flex-col">
+        <div className="p-4 flex flex-col" data-aos="flip-left" >
           <img src={blog1} alt="blog-img" />
           <div className="bg-white text-black relative bottom-8 w-[200px] p-2  mx-auto  ">
             <h1 className="text-gray-600 font-normal flex justify-center items-center gap-2  py-2  ">
@@ -35,7 +35,7 @@ const NewTrends = () => {
             </p>
           </div>
         </div>
-        <div className="p-4  flex flex-col">
+        <div className="p-4  flex flex-col" data-aos="flip-left" >
           <img src={blog2} alt="blog-img" />
           <div className="bg-white text-black relative bottom-8 w-[200px] p-2 mx-auto  ">
             <h1 className="text-gray-600 font-normal flex justify-center items-center gap-2  py-2 ">
@@ -47,7 +47,7 @@ const NewTrends = () => {
             </p>
           </div>
         </div>
-        <div className="p-4  flex flex-col">
+        <div className="p-4  flex flex-col" data-aos="flip-left" >
           <img src={blog3} alt="blog-img" />
           <div className="bg-white text-black relative bottom-8 w-[200px] p-2 mx-auto  flex flex-col justify-center items-center  ">
             <h1 className="text-gray-600 font-normal flex justify-center items-center gap-2  py-2 ">

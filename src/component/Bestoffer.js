@@ -12,7 +12,7 @@ const Bestoffer = () => {
 
 
   return (
-    <div className='bg-[#F3F2EE] p-6 mt-6 flex flex-col justify-center items-center 'data-aos="zoom-in-right" >
+    <div className='bg-[#F3F2EE] p-6 mt-6 flex flex-col justify-center items-center 'data-aos="zoom-in" >
        <div className='relative' >
            <div >
                 <img src={bagImage} alt='bag-img'/>

@@ -1,10 +1,16 @@
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import bg_hero1 from "../img/hero/hero-1.jpg";
 import bg_hero2 from "../img/hero/hero-2.jpg"; 
 import { FaArrowLeft, FaArrowRight,FaFacebookF,FaTwitter,FaPinterest ,FaInstagram} from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css"
 
 const Hero = () => {
+
+  useEffect(()=>{
+    AOS.init({duration:2000})
+  },[])
 
   const arrow= <FaArrowRight/>
 
@@ -44,7 +50,7 @@ const Hero = () => {
       className="w-full h-[600px] bg-cover bg-center lg:h-[750px]"
     >
       <div className={`flex flex-col gap-8 justify-center h-[500px] p-4 pt-32   ${content ? 'opacity-0 transition-all duration-500' : 'opacity-1 transition-all duration-500'}`}>
-       <div className="lg:pt-52 lg:pl-28 lg:flex lg:gap-11 lg:flex-col flex flex-col gap-14 mt-20">
+       <div className="lg:pt-52 lg:pl-28 lg:flex lg:gap-11 lg:flex-col flex flex-col gap-14 mt-20" data-aos="fade-right" >
        <h6 className="text-[#E53637] text-xl">Summer Collection</h6>
         <h2 className="text-black font-bold text-4xl">Fall - Winter Collections 2030</h2>
         <p className="text-[#3D3D3D] md:w-[400px]">    

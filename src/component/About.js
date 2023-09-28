@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img1 from "../img/about/about-us.jpg";
 import img2 from "../img/about/testimonial-author.jpg";
 import img3 from "../img/about/testimonial-pic.jpg";
@@ -10,8 +10,14 @@ import Nav from "./Nav";
 import { FaQuoteRight } from "react-icons/fa";
 import clientImg from "./client-img";
 import Footer from "./Footer";
+import AOS from "aos";
+import "aos/dist/aos.css" 
+
 
 const About = () => {
+  useEffect(()=>{
+    AOS.init({duration:2000})
+  },[])
   return (
     <div>
       <Nav />
@@ -42,7 +48,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="bg-[#F3F2EE] p-10 flex flex-col gap-5 ">
+      <div className="bg-[#F3F2EE] p-10 flex flex-col gap-5 " data-aos="zoom-in">
         <FaQuoteRight className="text-[#E53637] mx-auto text-4xl " />
         <p className="font-semibold text-xl text-center pt-3">
           “Going out after work? Take your butane curling iron with you to the
@@ -68,22 +74,22 @@ const About = () => {
         <h1 className="text-[#E53637] text-center text-base">OUR TEAM</h1>
         <h2 className="text-center p-4 text-2xl">Meet Our Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center" data-aos="fade-right">
                 <img src={team1} alt="person-img" className="rounded-3xl p-2 mx-auto "/>
                 <h1 className="text-2xl font-semibold p-3">John Simth</h1>
                 <h2 className="text-lg text-gray-700 pl-3">Fashion Design</h2>
             </div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center" data-aos="fade-right">
                 <img src={team2} alt="person-img" className="rounded-3xl p-2 mx-auto "/>
                 <h1 className="text-2xl font-semibold p-3">Christine Wise</h1>
                 <h2 className="text-lg text-gray-700 pl-3">C.E.O</h2>
             </div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center" data-aos="fade-left">
                 <img src={team3} alt="person-img" className="rounded-3xl p-2 mx-auto "/>
                 <h1 className="text-2xl font-semibold p-3">Sean Robbins</h1>
                 <h2 className="text-lg text-gray-700 pl-3">Manager</h2>
             </div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center" data-aos="fade-left">
                 <img src={team4} alt="person-img" className="rounded-3xl p-2 mx-auto "/>
                 <h1 className="text-2xl font-semibold p-3">Lucy Myner</h1>
                 <h2 className="text-lg text-gray-700 pl-3">Techincal Assisant</h2>

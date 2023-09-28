@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import blog1 from "../img/blog/blog-1.jpg";
 import blog2 from "../img/blog/blog-2.jpg";
 import blog3 from "../img/blog/blog-3.jpg";
 import { FaCalendarCheck } from "react-icons/fa";
-
+import AOS from "aos";
+import "aos/dist/aos.css"
 const NewTrends = () => {
+
+
+  useEffect(()=>{
+    AOS.init({duration:2000})
+  },[])
+
+
   return (
-    <div>
+    <div data-aos="zoom-out-up">
       <div className="flex flex-col gap-2 justify-center items-center">
         <h1 className="text-[#E53637] mt-6 text-xl  text-center mb-5">
           LATEST NEWS
@@ -14,7 +22,7 @@ const NewTrends = () => {
         <h2 className="text-4xl font-semibold text-center mb-5">
           Fashion New Trends
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:p-4"  >
         <div className="p-4 flex flex-col">
           <img src={blog1} alt="blog-img" />
           <div className="bg-white text-black relative bottom-8 w-[200px] p-2  mx-auto  ">

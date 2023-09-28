@@ -7,11 +7,14 @@ import Nav from "../Nav";
 import SimilarProduct from "./SimilarProduct";
 import { useEffect, useState } from "react";
 import ProductDescription from "./ProductDescription";
+import AOS from "aos";
+import "aos/dist/aos.css" 
 
 const ProductDetail = () => {
 
   useEffect(()=>{
     window.scrollTo(0,0)
+    AOS.init({duration:2000})
   },[])
 
   const { id } = useParams();
@@ -54,13 +57,13 @@ const ProductDetail = () => {
   return (
     <div>
       <Nav />
-      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center  shadow-xl m-6  mt-24 rounded-lg md:shadow-none">
-        <div>
-          <img src={img} alt="product-img" className="rounded-xl w-full md:h-[450px] object-fill p-8" />
+      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center   shadow m-6  mt-24 rounded-lg p-4">
+        <div className="shadow-lg lg:w-[400px] lg:h-[350px] rounded-lg " data-aos="zoom-in">
+          <img src={img} alt="product-img" className=" w-full md:h-full rounded-3xl object-cover p-8" />
         </div>
-        <div className="flex flex-col gap-4 p-6 justify-center items-center">
-          <h1 className="text-xl font-semibold">{title}</h1>
-          <h2 className="text-center text-lg text-gray-600">{description}</h2>
+        <div className="flex flex-col gap-4 p-6 justify-center items-center" data-aos="flip-left">
+          <h1 className=" font-semibold text-3xl ">{title}</h1>
+          <h2 className="text-center w-[250px] md:w-[300px]  text-gray-600">{description}</h2>
           <h3 className="text-xl font-bold ">
             {price}{" "}
             <span className="line-through ml-3 text-red-600 text-base">
@@ -75,7 +78,7 @@ const ProductDetail = () => {
             <div className="flex gap-3">
             {
             sizeList.map(function(sizeitem){
-              return <input key={sizeitem.id} className= {sizes === sizeitem.size ?  " bg-black text-white border text-lg  mt-4 border-black rounded-full w-10 h-10 flex items-center justify-center  " : "rounded-full w-10 h-10 flex items-center justify-center border text-lg mt-4 border-black"} type="button" value={sizeitem.size} onClick={handleSize}/>
+              return <input key={sizeitem.id} className= {sizes === sizeitem.size ?  " bg-black text-white border text-lg   mt-4 border-black rounded-full w-10 h-10 flex items-center justify-center cursor-pointer  " : "rounded-full cursor-pointer w-10 h-10 flex items-center justify-center border text-lg mt-4 border-black"} type="button" value={sizeitem.size} onClick={handleSize}/>
             })
           }
             </div>

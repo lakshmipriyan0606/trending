@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import Rating from "./Rating";
-import { Link } from "react-router-dom"; // Import Link from React Router
+import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css" 
 
 const ProductList = ({id, itemImg, title, price, feature, ratingValue }) => {
   const [fav, setFav] = useState(false);
@@ -10,8 +12,11 @@ const ProductList = ({id, itemImg, title, price, feature, ratingValue }) => {
     setFav(!fav);
   }
 
+  useEffect(()=>{
+    AOS.init({duration:2000})
+  })
   return (
-    <div className="mt-6 flex flex-col justify-center items-center gap-3 shadow-lg hover:shadow-2xl rounded-2xl cursor-pointer p-4">
+    <div className="mt-6 flex flex-col justify-center items-center gap-3 shadow-lg hover:shadow-2xl rounded-2xl cursor-pointer p-4"  data-aos="zoom-in">
       <div className="relative group mt-3">
         <img
           src={itemImg}

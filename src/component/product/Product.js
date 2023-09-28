@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import data from "../../data";
 import ProductList from "./ProductList";
 
+
 const Product = ({itemCount,setItemCount}) => {
   const [items, setItems] = useState(data);
   const [showItems, setShowItems] = useState(false);
@@ -42,7 +43,7 @@ const Product = ({itemCount,setItemCount}) => {
         </button>
       </div>
 
-      <div className={`mt-6 grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3 transition-opacity ${showItems ? 'opacity-100 transition-opacity duration-300' : 'opacity-0 transition-opacity duration-300'}`}>
+      <div className={`mt-6 grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3 transition-opacity ${showItems ? 'opacity-100 transition-opacity duration-300' : 'opacity-0 transition-opacity duration-300'}`}  >
         {items.map((item, index) => (
           <ProductList
             key={index}

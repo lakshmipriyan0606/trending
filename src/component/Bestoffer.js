@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import bagImage from "../img/product-sale.png"
 import Timer from './TimeCounter'
+import AOS from "aos";
+import "aos/dist/aos.css"
 
 const Bestoffer = () => {
 
+  useEffect(()=>{
+    AOS.init({duration:2000})
+  },[])
+
+
   return (
-    <div className='bg-[#F3F2EE] p-6 mt-6 flex flex-col justify-center items-center '>
+    <div className='bg-[#F3F2EE] p-6 mt-6 flex flex-col justify-center items-center 'data-aos="zoom-in-right" >
        <div className='relative' >
            <div >
                 <img src={bagImage} alt='bag-img'/>

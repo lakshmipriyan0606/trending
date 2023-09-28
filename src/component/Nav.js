@@ -11,8 +11,8 @@ const Nav = () => {
   }
 
   return (
-    <div>
-      <div className="flex justify-between  items-center p-4 md:hidden fixed top-0 left-0 w-full bg-[#F3F2EE]">
+    <div className="w-full">
+      <div className="flex w-full  items-center p-4 md:hidden fixed justify-between top-0 left-0   z-40 bg-[#F3F2EE]">
         <h1 className="text-3xl font-bold md:pt-2">
           Trend<span className=" text-[#E53637] ">ing</span>
         </h1>

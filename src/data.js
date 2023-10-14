@@ -1,3 +1,4 @@
+
 import product1 from "./img/product/product-1.jpg"
 import product2 from "./img/product/product-2.jpg"
 import product3 from "./img/product/product-3.jpg"
@@ -12,6 +13,7 @@ import product11 from "./img/product/product-11.jpg"
 import product12 from "./img/product/product-12.jpg"
 import product13 from "./img/product/product-13.jpg"
 import product14 from "./img/product/product-14.jpg"
+import product15 from "./img/product-sale.png"
 
 const data = [
     {
@@ -149,6 +151,16 @@ const data = [
       description: "Limited-time sale! Grab the Pique Biker Jacket at a discounted price. Elevate your fashion game.",
       rating: 4.5,
       review  : 14
+    },
+    {
+      id: 15,
+      img: product15,
+      title: "Pique Biker Jacket",
+      price: "67.24",
+      feature: "NEW",
+      description: "A stylish and trendy biker jacket made from high-quality materials. This jacket is perfect for adding a fashionable edge to your look.",
+      rating: 4.5,
+      review : 32 
     },
   ];
   

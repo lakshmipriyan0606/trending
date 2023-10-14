@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 import Sidenavbar from "./Sidenavbar";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
@@ -9,6 +10,12 @@ const Nav = () => {
   function toggleSidenav() {
     setSideNavbar(!sideNavbar);
   }
+
+ 
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
 
   return (
     <div>
@@ -35,6 +42,11 @@ const Nav = () => {
             <li>
               <Link to="/about" className="text-center hover:text-[#E53637] duration-500 transition-colors">
                 About
+              </Link>
+            </li>
+            <li>
+              <Link to="/product" className="text-center hover:text-[#E53637] duration-500 transition-colors">
+                Product
               </Link>
             </li>
             <li>

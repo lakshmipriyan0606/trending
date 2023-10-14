@@ -5,6 +5,7 @@ import bg_hero2 from "../img/hero/hero-2.jpg";
 import { FaArrowLeft, FaArrowRight,FaFacebookF,FaTwitter,FaPinterest ,FaInstagram} from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css"
+import { Link } from "react-router-dom";
 
 const Hero = () => {
 
@@ -57,7 +58,7 @@ const Hero = () => {
           A specialist label creating luxury essentials. Ethically crafted with
           an unwavering commitment to exceptional quality.
         </p>
-        <button className='w-40 bg-black flex justify-center items-center text-white rounded p-1 text-lg hover:bg-black hover:bg-opacity-70 transition-opacity duration-500  gap-3'>Shop Now  {arrow}</button>
+        <Link to="/product" className='w-40 bg-black flex justify-center items-center text-white rounded p-1 text-lg hover:bg-black hover:bg-opacity-70 transition-opacity duration-500  gap-3'>Shop Now  {arrow}</Link>
        </div>
         <div className="flex justify-between mt-5 w-full">
           <FaArrowLeft

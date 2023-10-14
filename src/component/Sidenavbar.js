@@ -25,7 +25,7 @@ const Sidenavbar = ({ sideNavbar, setSideNavbar }) => {
               <Link to={`/`} className="border-b border-gray-300 text-center">
                 <li>Home</li>
               </Link  >
-              {/* <Link  className="border-b border-gray-300 text-center"> <li>Shop</li></Link> */}
+              <Link to={`/product`}  className="border-b border-gray-300 text-center"> <li>Product</li></Link>
               <Link to={`/about`}  className="border-b border-gray-300 text-center">
                 <li>About</li>
               </Link>

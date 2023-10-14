@@ -17,7 +17,7 @@ const CartItem = ({ product }) => {
 
 
 
-  const { price, title, img } = product;
+  const { price, title, image } = product;
   return (
     <div className="pt-6 ">
       <div className="flex  justify-evenly items-center gap-10">
@@ -29,9 +29,9 @@ const CartItem = ({ product }) => {
      <div className={deleteItem ? "hidden" : ""}>
      <div className="flex justify-evenly items-center gap-2 p-3  pt-10">
         <div className="flex flex-col justify-evenly gap-3 items-center" >
-          <img src={img} className="w-14 h-14 rounded-lg" alt="product-img" />
+          <img src={image} className="w-14 h-14 rounded-lg" alt="product-img" />
           <h1 className="text-sm">{title}</h1>
-          <p>${price}</p>
+          <p> Price : ${price}</p>
         </div>
           <div className="cursor-pointer flex justify-center gap-3 items-center  ">
             <FaMinus
@@ -46,7 +46,7 @@ const CartItem = ({ product }) => {
               }}
             />
           </div> 
-          <p className="font-bold">${Math.round( count * Number(price)) }</p>
+          <p className="font-bold"> Price : ${Math.round( count * Number(price)) } </p>
           <FaXmark onClick={handledelete} className="cursor-pointer" />
       </div>
      </div>

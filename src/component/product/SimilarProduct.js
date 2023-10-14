@@ -1,10 +1,19 @@
-import React, { useState } from "react";
-import data from "../../data";
+import React, { useState , useEffect } from "react";
 import ProductList from "./ProductList";
+import axios from "axios";
 
 const SimilarProduct = () => {
-  const [items] = useState(data);
-  const filteredItems = items.filter((item) => item.feature === "NEW");
+  const [items , setItems] = useState([]);
+  useEffect(() => {
+    try {
+      axios.get("https://fakestoreapi.com/products").then((res) => {
+        setItems(res.data);
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }, []);
+  const filteredItems = items.filter((item) => item.category === "men's clothing");
 
   return (
     <div>
@@ -12,7 +21,7 @@ const SimilarProduct = () => {
         {filteredItems.map((item, index) => (
           <ProductList
             key={index}
-            itemImg={item.img}
+            itemImg={item.image}
             title={item.title}
             price={item.price}
             feature={item.feature}

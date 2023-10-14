@@ -1,6 +1,5 @@
 
 import { Link, useParams } from "react-router-dom";
-import data from "../../data";
 import Rating from "./Rating";
 import Footer from "../Footer";
 import Nav from "../Nav";
@@ -9,16 +8,19 @@ import { useEffect, useState } from "react";
 import ProductDescription from "./ProductDescription";
 import AOS from "aos";
 import "aos/dist/aos.css" 
+import axios from "axios";
 
 const ProductDetail = () => {
 
+  const  [item , setItem] = useState([])
+
   useEffect(()=>{
-    window.scrollTo(0,0)
+   axios.get("https://fakestoreapi.com/products").then(res=>setItem(res.data))
     AOS.init({duration:2000})
   },[])
 
   const { id } = useParams();
-  const product = data.find((item) => item.id === parseInt(id));
+  const product = item.find((item) => item.id === parseInt(id));
 
  const  sizeList = [
     {
@@ -53,19 +55,19 @@ const ProductDetail = () => {
       </div>
     );
   }
-  const { review, description, price, title, rating, img } = product;
+  const { review, description, price, title, rating, image } = product;
   return (
     <div>
       <Nav />
-      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center   shadow m-6  mt-24 rounded-lg p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center   shadow m-6  mt-24 rounded-lg p-4 ">
         <div className="shadow-lg lg:w-[400px] lg:h-[350px] rounded-lg " data-aos="zoom-in">
-          <img src={img} alt="product-img" className=" w-full md:h-full rounded-3xl object-cover p-8" />
+          <img src={image} alt="product-img" className=" w-full md:h-full rounded-3xl object-cover p-8" />
         </div>
         <div className="flex flex-col gap-4 p-6 justify-center items-center" data-aos="flip-left">
-          <h1 className=" font-semibold text-3xl ">{title}</h1>
+          <h1 className=" font-semibold text-base  lg:text-3xl text-center ">{title}</h1>
           <h2 className="text-center w-[250px] md:w-[300px]  text-gray-600">{description}</h2>
           <h3 className="text-xl font-bold ">
-            {price}{" "}
+           $ {price}{" "}
             <span className="line-through ml-3 text-red-600 text-base">
               $69.65
             </span>
